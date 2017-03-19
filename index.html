@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Jquery</title>
+	<link href="https://fonts.googleapis.com/css?family=Lobster|Lobster+Two|Original+Surfer|Sansita|Overlock" rel="stylesheet">
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="Jquery">
+	<header class="Header">
+		<section class="Header-container">
+			<div class="Header-container-logo">
+				<img src="./img/logo-jquery.png" alt="">
+			</div>
+			
+		</section>
+	</header>
+	<main>
+		<section class="Content">
+			<div class="Content-team">
+				<h2 align="center">¿Que es?</h2>
+				<p>jQuery es una libreria rápida, pequeña y rica en funciones de JavaScript. Hace las cosas como documento HTML 
+					recorrido y la manipulación, manejo de eventos, animación, y Ajax mucho más simple con un API fácil de usar que funciona a través de una multitud de navegadores. Con una combinación de versatilidad y capacidad de ampliación, jQuery ha cambiado la forma en que millones de personas escriben JavaScript.
+				</p>
+			</div>
+			<div class="Content-team">
+				<h2 align="center">CDN</h2>
+				<p align="center">
+					< script
+					  src="https://code.jquery.com/jquery-3.2.0.min.js"
+					  integrity="sha256-JAW99MJVpJBGcbzEuXk4Az05s/XyDdBomFqNlM3ic+I="
+					  crossorigin="anonymous">
+					</ script >
+					  	
+	  			</p>
+			</div>
+			<div class="Content-team">
+				<h2 align="center">Varibles</h2>
+				<ul>
+					<li>Se deifiene con la palabra var <b>(var variableName)</b></li>
+					<li>Utilizar camelCase <b>(variableName)</b></li>
+					<li>Valores posibles <b>String</b>, <b>boolean</b>, <b>number</b>, <b>undefined</b>, <b>null</b>, <b>Object</b> y <b>function</b> <b>(var name = 'jquery')</b></li>
+					<li>JavaScript es sensible a mayúsculas <b>(name <> Name)</b></li>
+					<li>Son variables no fuertemente tipiadas <b>(var x = 'true'; x = 1; x = ture )</b></li>
+				</ul>
+			</div>
+			<div class="Content-team">
+				<h2 align="center">Funciones</h2>
+				<div class="List-Card">
+					<div class="Card">
+						<div class="Card-text">
+							<h3>Declaracion</h3>
+							<ul>
+								<li>Palabra clave function</li>
+								<li>Funciones Nombradas <b>(function leer(){})</b></li>
+								<li>Funciones Anonimas <b>(function(){})</b></li>
+								<li>Paramertro String, Number, Bolean, Objetos, Funciones, etc <b>(function(param1,param2){})</b></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="List-Card">
+					<div class="Card">
+						<div class="Card-text">
+							<h3>jQuery Object</h3>
+							<ul>
+								<li>jQuery viene con su propio objeto, el signo del dólar <b>$()</b></li>
+								<li>Utilizando la palabra reservada <b>jQuery()</b></li>
+								<li>jQuery Object es una parte del DOM que retorna metodos, propiedades, tipos y mas de los elementos del DOM</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="List-Card">
+					<div class="Card">
+						<div class="Card-text">
+							<h3>Load</h3>
+							<p>
+								Window.onload = function(){} <b>===</b> $(document).load(functionn(){}); <b>(Se ejecuta despues de cargar toda la pagina)</b>
+							</p>
+						</div>
+					</div>
+					<div class="Card">
+						<div class="Card-text">
+							<h3>Ready</h3>
+							<p>
+								Window.ready = function(){} <b>===</b> $(document).ready(functionn(){}); <b>===</b> $(function(){}) <b>(Se ejecuta despues de cargar el archivo js)</b>
+							</p>
+						</div>
+					</div>
+					<div class="Card">
+						<div class="Card-text">
+							<h3>Create Elemenent</h3>
+							<p>
+								document.createElement('p') <b>===</b> var parrafo = '< p > </ p >'; $('p'); $('< p > </ p >');</b>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="List-Card">
+					<div class="Card">
+						<div class="Card-text">
+							<h3>Filtros</h3>
+							<ul>
+								<li>.eq() <b>($('li').eq(2) El tercer li)</b></li>
+								<li>.filter() <b>($('li').filetr(':even') || $('li').filter(function(index){index==1 || $(this).attr('id') == "id"}))</b></li>
+								<li>.first() <b>($('li').first() El primer elemento de la lista)</b></li>
+								<li>.has() <b>($( "ul" ).has( "li" ) Todas la listas que contengan items)</b></li>
+								<li>.is() <b>($("p").is( ":contains('Peter')" ) los p que tengan la palabra 'Peter')</b></li>
+								<li>.last()  <b>($('li').last() El ultimo elemento de la lista)</b></li>
+								<li>.map() <b>($( ":checkbox" ).map(function() {return this.id;}) Obtener todos los id)</b></li>
+								<li>.not() <b>($( "div" ).not( ".green, #blueone" ) Los div que no tenga la clase .green o el id #blueone )</b></li>
+								<li>.slice() <b>($( "li" ).slice( 0, 3 ).css("background-color","red") Los li desde el 1 a el 4)</b></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="List-Card">
+					<div class="Card">
+						<div class="Card-text">
+							<h3>Moverse en el DOM</h3>
+							<ul>
+								<li>.children() <b>($('li').children("p") Los elmentos p hijos de li)</b></li> 
+								<li>.closest() <b>Antecesor</b></li>
+								<li>.find() <b>($('li').find("p") Todo los p que esten debajo de un li)</b></li>
+								<li>.next() <b>($(p).next() El siguiente elemento p en el DOM)</b></li>
+								<li>.nextAll()  <b>($(p).nextAll() Todo los siguiente elementos p en el DOM)</b></li>
+								<li>.nextUntil() </li>
+								<li>.offsetParent() <b>($( "li" ).offsetParent() El primer ancestro )</b></li>
+								<li>.parent() </li>
+								<li>.parents() </li>
+								<li>.parentsUntil() </li>
+								<li>.prev() </li>
+								<li>.prevAll() </li>
+								<li>.prevUntil() </li>
+								<li>.siblings() <b>($( "p" ).siblings("span") Todos los span que estan al mismo nivel)</b></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="List-Card">
+					<div class="Card">
+						<div class="Card-text">
+							<h3>Maniplulacion</h3>
+							<ul>
+								<li>.addClass() <b>$('p').addClass('active') Agregar clase active</b></li>
+								<li>.attr() <b>$('a').attr('href') Agregar u obtener</b></li>
+								<li>.hasClass()  <b>$('a').hasClass('active')  Tiene la  clase active</b></li>
+								<li>.prop() <b>$('a').prop()  Agregar u obtener propiedades</b></li>
+								<li>.removeAttr() <b>$('a').removeAttr('href') Remover href </b></li>
+								<li>.removeClass() <b>$('p').removeClass('active') Remover clase active</b></li>
+								<li>.removeProp() <b>$('a').removeProp()  Remover u obtener propiedades</b></li>
+								<li>.toggleClass() <b>$('p').toggleClass('active') Agregar o quitar clase active</b></li>
+								<li>.val() <b>$('p').val() Agregar u obtener el valor de p</b></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="List-Card">
+					<div class="Card">
+						<div class="Card-text">
+							<h3>Maniplulacion CSS</h3>
+							<ul>
+								<li>.css() </li>
+								<li>.height() </li>
+								<li>.innerHeight() </li>
+								<li>.innerWidth() </li>
+								<li>.offset() </li>
+								<li>.outerHeight() </li>
+								<li>.outerWidth() </li>
+								<li>.position() </li>
+								<li>.scrollLeft() </li>
+								<li>.scrollTop() </li>
+								<li>.width()</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="List-Card">
+					<div class="Card">
+						<div class="Card-text">
+							<h3>Maniplulacion DOM</h3>
+							<ul>
+								<li>.after() </li>
+								<li>.append() </li>
+								<li>.appendTo() </li>
+								<li>.before() </li>
+								<li>.clone() </li>
+								<li>.detach() </li>
+								<li>.empty() </li>
+								<li>.html() </li>
+								<li>.insertAfter() </li>
+								<li>.insertBefore() </li>
+								<li>.prepend() </li>
+								<li>.prependTo() </li>
+								<li>.remove() </li>
+								<li>.replaceAll() </li>
+								<li>.replaceWith() </li>
+								<li>.text() </li>
+								<li>.unwrap() </li>
+								<li>.wrap() </li>
+								<li>.wrapAll() </li>
+								<li>.wrapInner()</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="Content-team">
+				<h2 align="center">Selectores</h2>
+				<ul>
+					<li>document.getElementById("id") <b>===</b> $('#id') <b>(por id)</b> </li>
+					<li>document.getElementByClassName("class") <b>===</b> $('.class') <b>(por clase)</b></li>
+					<li>document.getElementByTagsName("input") <b>===</b> $('input')  <b>(por Etiqueta)</b></li>
+					<li>document.querySelectorAll("input[type = 'email']") <b>===</b> $("input[type = 'email']") <b>(por Atributo)</b> </li>
+					<li><b>Hijos</b> document.getElementByClassName("class").children <b>===</b> $('.class').children() </li>
+					<li><b>Padres</b> document.getElementByClassName("class").parentNode <b>===</b> $('.class').parent() </li>
+					<li><b>Hermanos</b> document.getElementByClassName("class").(nextSibling(),previousSibling()) <b>===</b> $('.class').siblings() </li>
+					<li>$('div').not('.active') <b>(Elemento que no tenga la clase active)</b></li>
+					<li>var header = $('header'); $('.active', header[0]); <b>(buscar dentro de un contexto)</b></li>
+					<li>$(':input'); <b>(Datos de un formulario)</b></li>
+				</ul>
+			</div>
+			<div class="Content-team">
+				<h2 align="center">Events</h2>
+				<div class="List-Card">
+					<div class="Card">
+						<div class="Card-text">
+							<h3>Browser Events</h3>
+							<ul>
+								<li>.resize()</li> 
+								<li>.scroll()</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="List-Card">
+					<div class="Card">
+						<div class="Card-text">
+							<h3>Form Events</h3>
+							<ul>
+								<li>.blur() </li>
+								<li>.change() </li>
+								<li>.focus() </li>
+								<li>.select() </li>
+								<li>.submit()</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="List-Card">
+					<div class="Card">
+						<div class="Card-text">
+							<h3>Keyboard Events</h3>
+							<ul>
+								<li>.focusin() </li>
+								<li>.focusout() </li>
+								<li>.keydown() </li>
+								<li>.keypress() </li>
+								<li>.keyup()</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="List-Card">
+					<div class="Card">
+						<div class="Card-text">
+							<h3>Mouse Events</h3>
+							<ul>
+								<li>.click() </li>
+								<li>.dblclick() </li>
+								<li>.focusin() </li>
+								<li>.focusout() </li>
+								<li>.hover() </li>
+								<li>.mousedown() </li>
+								<li>.mouseenter() </li>
+								<li>.mouseleave() </li>
+								<li>.mousemove() </li>
+								<li>.mouseout() </li>
+								<li>.mouseover() </li>
+								<li>.mouseup()</li>
+								<li>Multiples eventos el mismo handler $('button').on('click change',function(){})</li>
+								<li>Multiples eventos el distintos handler $('button').on({'click':function(){},'change':function(){}})</li>
+								<li>$('button').off('click') Remover evento click</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="Content-team">
+				<h2 align="center">Ajax</h2>
+				<p>Se hace posible realizar peticiones al servidor y obtener respuesta de este en segundo plano (sin necesidad de recargar la página web completa) y usar esos datos para, a través de JavaScript, modificar los contenidos de la página creando efectos dinámicos y rápidos.</p>
+				<ul>
+					<li>GET ALL $.ajax(
+						{
+							url: "http://api.tvmaze.com/shows",
+							success: function(data, status, jqXHR){
+								console.log(data);
+							} 	
+						})</li>
+						<li>GET ONE $.ajax(
+						{
+							url: "http://api.tvmaze.com/shows",
+							data: {"q":1},
+							success: function(data, status, jqXHR){
+								console.log(data);
+							} 	
+						})</li>
+				</ul>
+				<h3>
+					Promsesas
+				</h3>
+				<ul>
+					<li>$.ajax("http://api.tvmaze.com/shows").then(funciotn(data){console.log(data)})</li>
+					<li> $.ajax({url: 'http://api.tvmaze.com/shows'}).done( function() {   alert( 'Success!!' );}).fail( function() {  alert( 'Error!!' );}).always( function() { alert( 'Always' );});</li>
+				</ul>
+			
+			</div>
+		</section>
+	</main>
+</body>
+</html>
